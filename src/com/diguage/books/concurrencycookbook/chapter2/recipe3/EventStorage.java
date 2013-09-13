@@ -1,4 +1,4 @@
-package com.diguage.books.concurrencycookbook.synchronization.conditions;
+package com.diguage.books.concurrencycookbook.chapter2.recipe3;
 
 import java.util.Date;
 import java.util.LinkedList;

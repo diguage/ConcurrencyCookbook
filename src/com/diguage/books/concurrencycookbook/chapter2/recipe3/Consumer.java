@@ -1,21 +1,21 @@
-package com.diguage.books.concurrencycookbook.synchronization.conditions;
+package com.diguage.books.concurrencycookbook.chapter2.recipe3;
 
 /**
  * User: D瓜哥，http://www.diguage.com/
  * Date: 13-9-13
- * Time: 下午1:06
+ * Time: 下午1:07
  */
-public class Producer implements Runnable {
+public class Consumer implements Runnable {
     private EventStorage storage;
 
-    public Producer(EventStorage storage) {
+    public Consumer(EventStorage storage) {
         this.storage = storage;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            storage.set();
+            storage.get();
         }
     }
 }

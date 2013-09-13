@@ -1,4 +1,4 @@
-package com.diguage.books.concurrencycookbook.synchronization.lock;
+package com.diguage.books.concurrencycookbook.chapter2.recipe4;
 
 /**
  * User: D瓜哥，http://www.diguage.com/

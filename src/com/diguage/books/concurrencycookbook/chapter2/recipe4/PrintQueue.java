@@ -1,4 +1,4 @@
-package com.diguage.books.concurrencycookbook.synchronization.lock;
+package com.diguage.books.concurrencycookbook.chapter2.recipe4;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
