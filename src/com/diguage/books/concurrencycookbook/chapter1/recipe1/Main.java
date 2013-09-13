@@ -1,4 +1,4 @@
-package com.diguage.books.concurrencycookbook.management.creating;
+package com.diguage.books.concurrencycookbook.chapter1.recipe1;
 
 /**
  * Coder: D瓜哥，http://www.diguage.com/
