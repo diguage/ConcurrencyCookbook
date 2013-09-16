@@ -21,7 +21,7 @@
 
 1. 创建一个名为`Calculator`的类，并且实现`Runnable`接口。代码如下：
 
-```java
+```Java
 public class Calculator implements Runnable {
 ```
 
@@ -32,6 +32,18 @@ public class Calculator implements Runnable {
 
     public Calculator(int number) {
         this.number = number;
+    }
+```
+
+3. 实现`run()`方法，该方法是我们创建的线程执行时运行的程序（instruction），故而该方法用于计算乘法表。具体代码如下：
+
+```Java
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("%s: %d * %d = %d\n", Thread.currentThread().getName(),
+                    number, i, i * number);
+        }
     }
 ```
 
