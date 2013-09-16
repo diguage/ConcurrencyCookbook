@@ -47,9 +47,77 @@ public class Calculator implements Runnable {
     }
 ```
 
+4. 现在，是时候实现示例应用的主类(main class)了。创建名为`Main`的类，在该类中添加`main`方法。代码如下：
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+```
+
+5. 在`main()`方法内部，创建一个遍历十次的for循环，在循环体内，创建一个`Calculator`类的对象`calculator`，创建一个`Thread`类的对象`thread`，将`calculator`作为构造函数的参数，传递给`thread`的初始化语句。最后，调用`thread`对象的`start()`方法。代码如下：
+
+```Java
+        for (int i = 0; i < 10; i++) {
+            Calculator calculator = new Calculator(i);
+            Thread thread = new Thread(calculator);
+            thread.start();
+        }
+```
+
+6. 运行这个程序，看不同线程是如何并发执行的。
+
 ### 知其所以然
 
 ### 我想要太多
+
+### 完整代码
+
+#### Calculator类的完整代码
+```Java
+package com.diguage.books.concurrencycookbook.chapter1.recipe1;
+
+/**
+ * Coder: D瓜哥，http://www.diguage.com/
+ * Date: 2013-09-13
+ * Time: 21:42
+ */
+public class Calculator implements Runnable {
+    private int number;
+
+    public Calculator(int number) {
+        this.number = number;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("%s: %d * %d = %d\n", Thread.currentThread().getName(),
+                    number, i, i * number);
+        }
+    }
+}
+```
+
+#### Main类的完整代码
+```Java
+package com.diguage.books.concurrencycookbook.chapter1.recipe1;
+
+/**
+ * Coder: D瓜哥，http://www.diguage.com/
+ * Date: 2013-09-13
+ * Time: 19:46
+ */
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            Calculator calculator = new Calculator(i);
+            Thread thread = new Thread(calculator);
+            thread.start();
+        }
+    }
+}
+```
+
 
 
 
