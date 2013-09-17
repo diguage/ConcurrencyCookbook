@@ -70,7 +70,6 @@ public class Main {
         try (FileWriter file = new FileWriter("D:\\thread.log");
              PrintWriter pw = new PrintWriter(file)) {
 ```
-
 > 这里使用了Java7的语法，所以请将JDK升级到第七版，把编译工具设置成Java7。否则会报语法错误。
 
 8. 将所有线程的状态写到文件中。现在，现在的状态应该是`新建（NEW）`。代码如下：
