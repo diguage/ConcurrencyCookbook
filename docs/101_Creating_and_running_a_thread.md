@@ -22,13 +22,11 @@
 根据下面所述的步骤来实现这里例子：
 
 1. 创建一个名为`Calculator`的类，并且实现`Runnable`接口。代码如下：
-
 ```Java
 public class Calculator implements Runnable {
 ```
 
 2. 声明一个私有的整形属性，名称为`number`，实现该类的构造函数来初始化刚刚声明的属性。代码如下：
-
 ```Java
     private int number;
 
@@ -38,26 +36,24 @@ public class Calculator implements Runnable {
 ```
 
 3. 实现`run()`方法，该方法是我们创建的线程执行时运行的程序（instruction），故而该方法用于计算乘法表。具体代码如下：
-
 ```Java
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            System.out.printf("%s: %d * %d = %d\n", Thread.currentThread().getName(),
+            System.out.printf("%s: %d * %d = %d\n",
+                    Thread.currentThread().getName(),
                     number, i, i * number);
         }
     }
 ```
 
 4. 现在，是时候实现示例应用的主类(main class)了。创建名为`Main`的类，在该类中添加`main`方法。代码如下：
-
 ```Java
 public class Main {
     public static void main(String[] args) {
 ```
 
 5. 在`main()`方法内部，创建一个遍历十次的for循环，在循环体内，创建一个`Calculator`类的对象`calculator`，创建一个`Thread`类的对象`thread`，将`calculator`作为构造函数的参数，传递给`thread`的初始化语句。最后，调用`thread`对象的`start()`方法。代码如下：
-
 ```Java
         for (int i = 0; i < 10; i++) {
             Calculator calculator = new Calculator(i);
@@ -93,7 +89,8 @@ public class Calculator implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            System.out.printf("%s: %d * %d = %d\n", Thread.currentThread().getName(),
+            System.out.printf("%s: %d * %d = %d\n",
+                    Thread.currentThread().getName(),
                     number, i, i * number);
         }
     }
