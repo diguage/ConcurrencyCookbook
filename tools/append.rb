@@ -10,10 +10,9 @@ def scanFiles(dir)
   return list.sort
 end
 
-scanFiles("/home/deployer/Java/ConcurrencyCookbook/docs/").each do |f|
-  puts "/home/deployer/Java/ConcurrencyCookbook/docs/#{f.to_s}"
+scanFiles(Dir.pwd + "/../docs/").each do |f|
 
-  file = File.open("/home/deployer/Java/ConcurrencyCookbook/docs/#{f.to_s}", "a")
+  file = File.open(Dir.pwd + "/../docs/#{f.to_s}", "a")
   
   template = File.new("Template.md")
   template.each do |line|
