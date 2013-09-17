@@ -1,17 +1,20 @@
 template = File.new("Template.md")
-# 
-# file = File.open("fileName", "a")
-# file.puts ""
+
+# 扫描指定目录下到所有文件
 def scanFiles(dir) 
   list = []
   Dir.foreach(dir) do |f|
-    list << f
+    if f.to_s =~ /\w*md$/ 
+      list << f
+    end
   end
-  return list
+  return list.sort
 end
-# /home/deployer/Java/ConcurrencyCookbook/docs/
+
 scanFiles("/home/deployer/Java/ConcurrencyCookbook/docs/").each do |f|
+  file = File.open("/home/deployer/Java/ConcurrencyCookbook/docs/#{f.to_s}", "a")
   template.each do |line|
-    f.puts line
+    file.puts line
   end
+  file.close
 end
