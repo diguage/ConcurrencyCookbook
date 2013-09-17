@@ -65,7 +65,8 @@ public class Main {
      * @param thread 需要输出状态的线程对象
      * @param state  线程的旧状态
      */
-    private static void writeThreadInfo(PrintWriter pw, Thread thread, Thread.State state) {
+    private static void writeThreadInfo(PrintWriter pw,
+                                        Thread thread, Thread.State state) {
         pw.printf("Main : Id %d = %s\n", thread.getId(), thread.getName());
         pw.printf("Main : Priority: %d\n", thread.getPriority());
         pw.printf("Main : Old State: %s\n", state);
