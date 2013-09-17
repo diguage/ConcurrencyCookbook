@@ -1,4 +1,4 @@
-# Getting and setting thread information
+# 获取和设置线程信息
 
 ### 引言
 
