@@ -89,9 +89,30 @@ public class Main {
 
 ### 知其所以然
 
+下面的是示例程序执行的打印片段。我们从打印出的字符可以看出`PrimeGenerator`线程是如何打印输出信息以及当检测到线程被中断时，如何中止其执行的。
+
+```Java
+Number 43063 	is Prime.
+Number 43067 	is Prime.
+Number 43093 	is Prime.
+Number 43103 	is Prime.
+Number 43117 	is Prime.
+The Prime Generator has been Interrupted
+```
+
+`Thread`有一个布尔型的熟悉，来表明线程是否被中断。当调用`interrupt()`方法时，就是将其设置为`true`。而`isInterrupted()`方法则是返回该属性的当前值。
+
+
 ### 永无止境
 
+`Thread`还有一个可以检查线程是否中断的方法：即静态方法`interrupted()`，可以检查当前正在执行的线程是否被中断。
+
+> `isInterrupted()`方法和`interrupted()`方法有非常大的不同。前者不会改变线程是否中断的属性值；而后者则可以将其值设置为`false`。`interrupted()`是一个静态方法；平时开发推荐使用`isInterrupted()`方法。
+
+正如前面所述，线程可以忽略中断请求而继续执行。但是，这并不是我们想要的结果。
+
 ### 小有所成
+
 示例程序所用的所有代码的完整版本。
 
 #### PrimeGenerator类的完整代码
