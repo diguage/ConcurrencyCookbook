@@ -3,7 +3,7 @@ package com.diguage.books.concurrencycookbook.chapter1.recipe7;
 import java.util.Date;
 
 /**
- * 保存事件信息。
+ * 事件信息类
  * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-19
