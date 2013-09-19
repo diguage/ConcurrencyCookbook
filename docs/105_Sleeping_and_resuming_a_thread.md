@@ -29,11 +29,9 @@ public class FileClock implements Runnable {
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
-                System.out.printf("The FileClock has been interrupted");
+                System.out.printf("The FileClock has been interrupted.\n");
             }
-
         }
-    }
 ```
 
 4. 我们已经有了实现好的线程类。现在，我们来实现主类。创建一个名为`FileMain`的类，并且实现`main()`方法。代码如下：
@@ -92,6 +90,8 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 每秒向控制台打印出当前日期和时间。
+ * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-18
  * Time: 23:11
@@ -106,7 +106,6 @@ public class FileClock implements Runnable {
             } catch (InterruptedException e) {
                 System.out.printf("The FileClock has been interrupted.\n");
             }
-
         }
     }
 }
@@ -119,6 +118,8 @@ package com.diguage.books.concurrencycookbook.chapter1.recipe5;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 演示线程睡眠和恢复
+ * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-19
  * Time: 00:29
@@ -136,7 +137,6 @@ public class FileMain {
         }
 
         thread.interrupt();
-
     }
 }
 ```

@@ -3,6 +3,8 @@ package com.diguage.books.concurrencycookbook.chapter1.recipe5;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 演示线程睡眠和恢复
+ * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-19
  * Time: 00:29
@@ -20,6 +22,5 @@ public class FileMain {
         }
 
         thread.interrupt();
-
     }
 }
