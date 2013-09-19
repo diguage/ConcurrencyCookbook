@@ -1,4 +1,4 @@
-# Processing uncontrolled exceptions in a thread# 
+# Java7并发示例集108：处理线程的非可控异常
 
 ### 开门见山
 
