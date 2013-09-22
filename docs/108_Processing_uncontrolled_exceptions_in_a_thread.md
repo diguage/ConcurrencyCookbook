@@ -114,8 +114,6 @@ Process finished with exit code 0
 本文是从 **《Java 7 Concurrency Cookbook》** （D瓜哥窃译为 **《Java7并发示例集》** ）翻译而来，仅作为学习资料使用。没有授权，不得用于任何商业行为。
 
 
-版权说明
-
 ### 小有所成
 
 #### ExceptionHandler类的完整代码
