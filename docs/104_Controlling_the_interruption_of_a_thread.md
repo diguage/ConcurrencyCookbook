@@ -113,7 +113,7 @@ public class Main {
         thread.interrupt();
 ```
 
-9. 执行该示例，查看结果。代码如下：
+9. 执行该示例，查看结果。
 
 
 ### 知其所以然
