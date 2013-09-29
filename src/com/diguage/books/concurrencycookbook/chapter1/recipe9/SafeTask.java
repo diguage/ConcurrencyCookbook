@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 使用线程本地变量保证线程安全
+ * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-29
  * Time: 23:34
