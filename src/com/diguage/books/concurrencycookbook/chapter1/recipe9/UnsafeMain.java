@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  * Date: 2013-09-24
  * Time: 00:04
  */
-public class Core {
+public class UnsafeMain {
     public static void main(String[] args) {
         UnsafeTask task = new UnsafeTask();
         for (int i = 0; i < 10; i++) {

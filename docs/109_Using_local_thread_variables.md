@@ -12,13 +12,13 @@
 
 按照下面所示步骤，完成示例程序。
 
-1. 首先，
+1. 首先，实现一个有上述问题的程序。创建一个名为`UnsafeTask`的类，并且实现`Runnable`接口。在类中声明一个`java.util.Date`类型的私有属性。代码如下：
 ```Java
 public class UnsafeTask implements Runnable {
     private Date startDate;
 ```
 
-2. 实现`run()`方法，
+2. 实现`UnsafeTask`的`run()`方法，该方法实例化`startDate`属性，并将其值输出到控制台上。休眠随机一段时间，然后再次将`startDate`属性的值输出到控制台上。代码如下：
 ```Java
     @Override
     public void run() {
