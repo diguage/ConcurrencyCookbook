@@ -4,20 +4,23 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 不能保证线程安全的例子
- * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
- * Date: 2013-09-23
- * Time: 23:58
+ * Date: 2013-09-29
+ * Time: 23:34
  */
-public class UnsafeTask implements Runnable {
-    private Date startDate;
+public class SafeTask implements Runnable {
+    private static ThreadLocal<Date> startDate = new
+            ThreadLocal<Date>() {
+                @Override
+                protected Date initialValue() {
+                    return new Date();
+                }
+            };
 
     @Override
     public void run() {
-        startDate = new Date();
         System.out.printf("Starting Thread: %s : %s\n",
-                Thread.currentThread().getId(), startDate);
+                Thread.currentThread().getId(), startDate.get());
 
         try {
             TimeUnit.SECONDS.sleep((int) Math.rint(Math.random() * 10));
@@ -26,6 +29,6 @@ public class UnsafeTask implements Runnable {
         }
 
         System.out.printf("Thread Finished: %s : %s\n",
-                Thread.currentThread().getId(), startDate);
+                Thread.currentThread().getId(), startDate.get());
     }
 }
