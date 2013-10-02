@@ -1,4 +1,4 @@
-# Creating threads through a factory# 
+# 使用线程工厂创建线程
 
 ### 开门见山
 

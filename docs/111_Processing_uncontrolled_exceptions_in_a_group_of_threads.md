@@ -1,4 +1,4 @@
-# Processing uncontrolled exceptions in a group of threads# 
+# 处理线程组内的非受控异常
 
 ### 开门见山
 
