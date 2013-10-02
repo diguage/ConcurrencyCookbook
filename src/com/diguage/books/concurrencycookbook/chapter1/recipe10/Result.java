@@ -1,6 +1,8 @@
 package com.diguage.books.concurrencycookbook.chapter1.recipe10;
 
 /**
+ * 存储查询结果
+ * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-09-30
  * Time: 00:45
