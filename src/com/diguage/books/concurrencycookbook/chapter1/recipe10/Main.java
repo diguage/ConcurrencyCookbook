@@ -12,8 +12,10 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) {
         ThreadGroup threadGroup = new ThreadGroup("Searcher");
+
         Result result = new Result();
         SearchTask searchTask = new SearchTask(result);
+
         for (int i = 0; i < 5; i++) {
             Thread thread = new Thread(threadGroup, searchTask);
             thread.start();
@@ -40,6 +42,7 @@ public class Main {
         threadGroup.interrupt();
     }
 
+    // 等待任务完成
     private static void waitFinish(ThreadGroup threadGroup) {
         while (threadGroup.activeCount() > 9) {
             try {

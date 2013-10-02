@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 同步搜索
+ * 模拟搜索类
  * <p/>
  * Coder: D瓜哥，http://www.diguage.com/
  * Date: 2013-10-02
@@ -32,11 +32,12 @@ public class SearchTask implements Runnable {
         System.out.printf("Thread %s: End\n", name);
     }
 
+    // 模拟搜索
     private void doTask() throws InterruptedException {
         Random random = new Random(new Date().getTime());
         int value = (int) (random.nextDouble() * 100);
         System.out.printf("Thread %s: %d\n",
-                Thread.currentThread().getName());
+                Thread.currentThread().getName(), value);
         TimeUnit.SECONDS.sleep(value);
     }
 }
