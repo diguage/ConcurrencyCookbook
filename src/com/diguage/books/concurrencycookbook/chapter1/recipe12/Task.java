@@ -1,5 +1,7 @@
 package com.diguage.books.concurrencycookbook.chapter1.recipe12;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 线程类
  * <p/>
@@ -10,5 +12,10 @@ package com.diguage.books.concurrencycookbook.chapter1.recipe12;
 public class Task implements Runnable {
     @Override
     public void run() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

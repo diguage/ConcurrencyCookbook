@@ -2,6 +2,7 @@ package com.diguage.books.concurrencycookbook.chapter1.recipe12;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ThreadFactory;
 
@@ -30,5 +31,18 @@ public class MyThreadFactory implements ThreadFactory {
         stats.add(String.format("Created thread %d with name %s on %s\n",
                 t.getId(), t.getName(), new Date()));
         return t;
+    }
+
+    // 获取线程工厂类的工作状态
+    public String getStats() {
+        StringBuffer buffer = new StringBuffer();
+        Iterator<String> it = stats.iterator();
+
+        while (it.hasNext()) {
+            buffer.append(it.next());
+            buffer.append("\n");
+        }
+
+        return buffer.toString();
     }
 }
