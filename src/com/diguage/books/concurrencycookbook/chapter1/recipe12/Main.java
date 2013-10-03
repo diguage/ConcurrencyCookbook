@@ -12,6 +12,7 @@ public class Main {
         MyThreadFactory factory = new MyThreadFactory("MyThreadFactory");
         Task task = new Task();
         Thread thread;
+        System.out.println("Starting the Threads");
         for (int i = 0; i < 10; i++) {
             thread = factory.newThread(task);
             thread.start();
