@@ -51,5 +51,6 @@ public class Main {
             }
             System.out.printf("Main: Task %d: %d\n", i, number);
         }
+        executor.shutdown();
     }
 }
