@@ -37,6 +37,8 @@ public class Tester {
 
 6. 有没有遇到添加来事件不生效到问题？
 
+7. Session的功能是什么？怎么实现的？存在有什么问题？
+
 5. 有SQL语句如下，请说明各个部分到执行顺序。SQL语句：
 ```sql
 select 
