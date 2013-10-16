@@ -81,7 +81,6 @@ Thread Finished: 16 : Sun Sep 29 23:31:26 CST 2013
 
 5. 如前文所示，我们准备使用本地线程变量（the thread-local variables）机制来解决这个问题。
 
-
 6. 创建一个名为`SafeTask`的类，并且实现`Runnable`接口。代码如下：
 ```Java
 public class SafeTask implements Runnable {
